@@ -14,7 +14,7 @@ To use Directory Encryption, simply download the script and run it with Python:`
 You will be prompted to enter a password to use for the encryption/decryption process.
 
 ### Example
-![Example](assets/example.jpg)
+<img src="assets/example.JPG" width="400" height="200">
 
 ## Security
 Directory Encryption uses the AES algorithm with a 128-bit key to encrypt and decrypt directories. The password you provide is hashed using the MD5 algorithm and used as the key for the AES algorithm. This means that the password you provide is never stored in plain text, and the encryption process is secure.
