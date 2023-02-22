@@ -19,7 +19,7 @@ def decrypt_files(key_dict: 'dict[str, bytes]', directories: list) -> None:
                     os.remove(current_file_path)
 
 
-def decrypt_file_aes(key, current_file, decrypted_file):
+def decrypt_file_aes(key: bytes, current_file: str, decrypted_file: str):
     with open(current_file, 'rb') as cf, open(decrypted_file, 'wb') as df:
         # Read IV(initialization vector)
         iv = cf.read(16)

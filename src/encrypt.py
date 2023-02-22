@@ -18,7 +18,7 @@ def encrypt_files(key_dict: 'dict[str, bytes]', directories: list) -> None:
                     os.remove(current_file_path)
 
 
-def encrypt_file_aes(key, current_file, encrypted_file):
+def encrypt_file_aes(key: bytes, current_file: str, encrypted_file: str):
     # get initialization vector
     iv = os.urandom(16)
     encryptor = AES.new(key, AES.MODE_CBC, iv)
